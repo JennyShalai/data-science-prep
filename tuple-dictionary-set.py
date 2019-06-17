@@ -29,4 +29,25 @@ squares_dictionary = {int(number):int(number)*int(number) for number in nums.spl
 print(squares_dictionary)
 
 
+# Challenge 3:
+# Write a script that prompts the user for a state name. It will then check
+# that state name against the dictionary below to give back the capital
+# of that state. However, you'll notice that the dictionary doesn't know the
+# capitals for all the states. If the user inputs the name of a state that
+# isn't in the dictionary, your script should print 'Capital unknown'.
+# Your script should work regardless of capitalization used when the state
+# is input. Example: If you inputted CALIfORnia it should print Sacramento.
+
+state_dictionary = {'Colorado': 'Denver', 'Alaska': 'Juneau',
+    'California': 'Sacramento', 'Georgia': 'Atlanta',
+        'Kansas': 'Topeka', 'Nebraska': 'Lincoln',
+            'Oregon': 'Salem', 'Texas': 'Austin', 'New York': 'Albany'}
+user_input_state = input('Please enter your state:')
+key = user_input_state.lower().title()
+if key in state_dictionary:
+    print(state_dictionary[key])
+else:
+    print('Capital unknown')
+
+
 
