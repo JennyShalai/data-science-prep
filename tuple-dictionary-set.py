@@ -19,4 +19,14 @@ for i in range(0, len(number_list)-1, 2):
 print(result)
 
 
+# Challenge 2:
+# Write a script that prompts the user to input numbers separated by dashes
+# ( - ). Your script will take those numbers, and print a dictionary where
+# the keys are the inputted numbers, and the values are the squares of those numbers.
+
+nums = input('''Please enter a series of numbers separated by '-'. \n Hit enter when you are done. ''')
+squares_dictionary = {int(number):int(number)*int(number) for number in nums.split('-')}
+print(squares_dictionary)
+
+
 
