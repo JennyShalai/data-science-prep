@@ -50,4 +50,25 @@ else:
     print('Capital unknown')
 
 
+# Challenge 4:
+# Write a script that prompts the user to input numbers separated by commas,
+# and then does so again. It should then print those numbers that were common
+# in both entries (from lowest to highest).
 
+input1 = input('Please enter your numbers separated by commas:')
+input2 = input('Please enter your numbers separated by commas:')
+
+set1 = set(n for n in input1.split(', '))
+set2 = set(n for n in input2.split(', '))
+result_set = set1.intersection(set2)
+result_list = list(result_set)
+result_list.sort(key=int)
+result = ', '.join(result_list)
+
+print(result)
+
+
+
+# Challenge 5:
+# Write a script that prompts a user to input a list of words separated
+# by commas, and then prints out the unique words in the list.
