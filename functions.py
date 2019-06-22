@@ -59,3 +59,43 @@ def is_prime(n):
             result = False
             break
     return result
+
+
+# Challenge 4:
+'''As you write your own functions you will often call other functions from within them.
+    Your task here is complete the function next_perfect_square.
+
+    A number is a perfect square if it is the square of an integer, e.g. 9 = 3 * 3.
+    For the following question, you have access to the function is_perfect_square,
+    which returns True if the number is a perfect square, and False if it is not.
+    Use this function to fill out the code stub below.'''
+
+from math import sqrt
+def next_perfect_square(number):
+    '''
+        Returns the next perfect square of the input number, if the input number
+        is not a perfect square, returns -1.
+        Ex:
+        next_perfect_square(10)
+        >>> -1
+        next_perfect_square(9)
+        >>> 16
+        next_perfect_square(25)
+        >>> 36
+        next_perfect_square(37)
+        >>> -1
+        
+        Parameters
+        ----------
+        number: {int}
+        
+        Returns
+        -------
+        next_perfect: {int} the next perfect square, or -1 if number is not a
+        perfect square
+        '''
+    if is_perfect_square(number):
+        n = sqrt(number)
+        return (n+1)*(n+1)
+    else:
+        return -1
