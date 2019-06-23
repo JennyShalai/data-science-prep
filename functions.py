@@ -121,3 +121,31 @@ def flip_coin(p=0.5):
         return 'H'
     else:
         return 'T'
+
+
+# Challenge 6:
+def count_pair_sums(arr, number=0):
+    '''
+        Given an array, find the count of how many pairs of numbers in the array sum
+        to the input number
+        
+        Parameters
+        ----------
+        arr: {list} list of integers (positive and negative)
+        number: number to see if pairs sum to (default 0)
+        
+        Returns
+        -------
+        {int} the number of pairs found that sum to given number
+        
+        count_pair_sums([1, 1, 0, 0], 0): 1
+        count_pair_sums([7, 7, 8, 8], 15): 4
+        count_pair_sums([1, 1, 1, 1], 2): 6
+        count_pair_sums([10, 12, 10, 15, -1, 7, 6, 5, 4, 2, 1, 1, 1], 11): 9
+        '''
+    counter = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            if arr[i]+arr[j] == number:
+                counter += 1
+    return counter
