@@ -47,3 +47,33 @@ def mat_addition(A, B):
         return A + B
     else:
         return False
+
+
+# Challenge 3:
+# A common operation in linear algebra is to calculate XTX for a given matrix X.
+# Fill in the function below to perform this operation.
+
+import numpy as np
+
+def xtx_product(X):
+    """
+        Given a matrix X, calculate the inner product X^T X, where the ^T
+        operator denotes the transpose.
+        
+        Parameters
+        ----------
+        X: NumPy array size of (n, m)
+        
+        Returns
+        -------
+        NumPy Array of size (m, m)
+        """
+    return np.transpose(X).dot(X)
+
+
+
+
+
+
+
+
