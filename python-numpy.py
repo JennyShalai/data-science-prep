@@ -71,9 +71,27 @@ def xtx_product(X):
     return np.transpose(X).dot(X)
 
 
+# Challenge 3:
+# Use NumPy to return the rank of a matrix.
+# Since NumPy has broad functionality beyond just linear algebra,
+# many useful functions are organized into the np.linalg module.
 
+import numpy as np
+from numpy.linalg import matrix_rank
 
-
+def mat_rank(X):
+    """
+        Given a matrix X, return its rank.
+        
+        Parameters
+        ----------
+        X: NumPy array size of (n, m)
+        
+        Returns
+        -------
+        (int) the rank of X
+        """
+    return matrix_rank(X)
 
 
 
