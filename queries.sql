@@ -21,3 +21,12 @@ SELECT species
 FROM animals
 WHERE appearance
 LIKE "f%";
+
+
+
+/* Aggregate functions */
+
+/* Use an aggregate function to return the number of countries that became independent in the year 1918 */
+SELECT COUNT(code)
+FROM country
+WHERE indepyear = 1918;
