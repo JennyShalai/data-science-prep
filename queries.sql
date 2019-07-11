@@ -16,3 +16,8 @@ FROM animals
 WHERE num_legs
 BETWEEN 1 and 3;
 
+/* Use LIKE to show species that have an appearance that starts with 'f' */
+SELECT species
+FROM animals
+WHERE appearance
+LIKE "f%";
