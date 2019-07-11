@@ -30,3 +30,9 @@ LIKE "f%";
 SELECT COUNT(code)
 FROM country
 WHERE indepyear = 1918;
+
+
+/* Write a query that returns the average population of countries whose government is a Constitutional Monarchy */
+SELECT avg(population)
+FROM country
+WHERE governmentform = "Constitutional Monarchy";
