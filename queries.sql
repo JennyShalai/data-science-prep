@@ -36,3 +36,8 @@ WHERE indepyear = 1918;
 SELECT avg(population)
 FROM country
 WHERE governmentform = "Constitutional Monarchy";
+
+/* Write a query that returns each continent and the area of the largest country in that continent */
+SELECT continent, MAX(surfacearea)
+FROM country
+GROUP BY continent;
