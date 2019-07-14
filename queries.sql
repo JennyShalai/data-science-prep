@@ -41,3 +41,13 @@ WHERE governmentform = "Constitutional Monarchy";
 SELECT continent, MAX(surfacearea)
 FROM country
 GROUP BY continent;
+
+
+/* Joining tables */
+
+/* Using the animalshp database, return a table showing the name and appearance of every pet. Order by pet name*/
+SELECT name, appearance
+    FROM pets
+    JOIN animals
+    ON pets.species = animals.species
+    ORDER BY name;
