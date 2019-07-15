@@ -62,6 +62,7 @@ SELECT name, appearance
 SELECT COUNT(name) 
 FROM city;
 
+
 /* A natural thing to wonder about these cities is how they are distributed around the world. */
 /* To start with this topic, write a query to return the countrycode and count of cities in that country */
 /* for only the country with the most cities in the city table */
@@ -71,3 +72,10 @@ FROM city
 GROUP BY 1 /* countrycode */ 
 ORDER BY 2 
 DESC LIMIT 1;
+
+
+/* You could look at the number of cities per country to try to get a sense about cities all over the world, */
+/* but since there are several hundred countries this is not easily digestible. Instead, look at the counts of cities */
+/* per continent. Write a query that returns each continent and the number of cities in that continent. */
+/* Be sure that each city in the city table is included in the counts from your query */
+
