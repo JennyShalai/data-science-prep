@@ -51,3 +51,17 @@ SELECT name, appearance
     JOIN animals
     ON pets.species = animals.species
     ORDER BY name;
+    
+
+
+/* Checkpoint */
+
+/* A natural thing to wonder about these cities is how they are distributed around the world. */
+/* To start with this topic, write a query to return the countrycode and count of cities in that country */
+/* for only the country with the most cities in the city table */
+
+SELECT countrycode, COUNT(name) 
+FROM city 
+GROUP BY 1 /* countrycode */ 
+ORDER BY 2 
+DESC LIMIT 1;
