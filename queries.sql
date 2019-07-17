@@ -79,3 +79,9 @@ DESC LIMIT 1;
 /* per continent. Write a query that returns each continent and the number of cities in that continent. */
 /* Be sure that each city in the city table is included in the counts from your query */
 
+SELECT co.continent, COUNT(co.name) 
+FROM country co 
+LEFT JOIN city ci 
+ON co.code = ci.countrycode 
+GROUP BY co.continent;
+
