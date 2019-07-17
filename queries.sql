@@ -85,3 +85,8 @@ LEFT JOIN city ci
 ON co.code = ci.countrycode 
 GROUP BY co.continent;
 
+SELECT co.continent, COUNT(ci.name) 
+FROM city ci 
+LEFT JOIN country co 
+ON co.code = ci.countrycode 
+GROUP BY co.continent;
